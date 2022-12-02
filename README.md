@@ -4,6 +4,7 @@
 
 ## To Get Started
 
+ - Download Python 3.10 from [here](https://www.python.org/downloads/release/python-3108/)
  - If you do not have **git** installed, download it [here](https://git-scm.com/downloads)
  - If you do not have **pip** installed, download it [here](https://pip.pypa.io/en/stable/installing/)
  
@@ -16,12 +17,12 @@
       
       - **Windows:**
         ```
-        py -3.8 -m venv env
+        py -3.10 -m venv env
         env\Scripts\activate
         ```
       - **Mac & Linux**
         ```
-        python3.8 -m venv env
+        python3.10 -m venv env
         source env/bin/activate
         ```   
   
