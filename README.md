@@ -7,9 +7,11 @@
  - If you do not have **git** installed, download it [here](https://git-scm.com/downloads)
  - If you do not have **pip** installed, download it [here](https://pip.pypa.io/en/stable/installing/)
  
-- Clone the repo: `git clone https://github.com/team-headstart/QC-Hackathon.git`
+1. Clone the repo: `git clone https://github.com/team-headstart/QC-Hackathon.git`
+
+2. Run `cd qc-hackathon`
  
-- Create and activate a virtual environment
+3. Create and activate a virtual environment
     - Read more about VMs [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) if you are having issues 
       
       - **Windows:**
