@@ -31,6 +31,10 @@ def grants():
 def about():
     return render_template('about.html', title='About')
 
+@app.route("/upload")
+def upload_grant():
+    return render_template('upload_grant.html')
+
 
 if __name__ == '__main__':
     app.config["TEMPLATES_AUTO_RELOAD"] = True

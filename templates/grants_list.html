@@ -3,13 +3,27 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<div class="row">
+  <div class="col">
+    <a class="btn btn-primary" href="/upload" role="button">Upload Grant</a>
+  </div>
+</div>
 
 <div class="row">
     <div class="col-md-4">
+
       <div class="content-section">
-        <h3>Sidebar</h3>
-        <p class='text-muted'>You can put any information here you'd like.
+        <h3>Filter</h3>
+        <p class='text-muted'>Filter Grants based on your eligibility
           <ul class="list-group">
+            
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Affiliations</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+
             <li class="list-group-item list-group-item-light">Latest Posts</li>
             <li class="list-group-item list-group-item-light">Announcements</li>
             <li class="list-group-item list-group-item-light">Calendars</li>
@@ -31,9 +45,10 @@
             </div>
             </article>
         {% endfor %}
-      
+
     </div>
-   
+
+    
   </div>
 
 
