@@ -23,9 +23,20 @@ def home():
     return render_template('home.html', posts=posts)
 
 
+@app.route("/grants")
+def grants():
+    return render_template('grants_list.html', posts=posts)
+
+
+
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
+
+
+@app.route("/login")
+def login():
+    return render_template('account/login.html')
 
 
 if __name__ == '__main__':
