@@ -31,6 +31,10 @@ def grants():
 def about():
     return render_template('about.html', title='About')
 
+@app.route("/profile")
+def profile():
+    return render_template('profile.html', title='Profile')
+
 @app.route("/upload")
 def upload_grant():
     return render_template('upload_grant.html')
