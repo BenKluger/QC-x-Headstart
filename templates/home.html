@@ -1,6 +1,46 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for post in posts %}
+
+
+<!-- Hero -->
+<div class="p-5 text-center bg-light">
+  <h1 class="mb-3">Equal access to grants for all</h1>
+  <h4 class="mb-3">See what you qualify for!</h4>
+  <a class="btn btn-primary" href="/grants" role="button">View your grants</a>
+</div>
+<!-- Hero -->
+
+<div class="row justify-content-center">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">CIRI Special Excellence Award</h5>
+        <p class="card-text">One of the public schools with a few merit scholarships is the University of Vermont...</p>
+        <a href="#" class="btn btn-primary">Full grant information</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">UNCF STEM Scholarship</h5>
+        <p class="card-text">One of the public schools with a few merit scholarships is the University of Vermont...</p>
+        <a href="#" class="btn btn-primary">Full grant information</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Coca Cola Scholarship Program</h5>
+        <p class="card-text">One of the public schools with a few merit scholarships is the University of Vermont...</p>
+        <a href="#" class="btn btn-primary">Full grant information</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- {% for post in posts %}
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
@@ -11,5 +51,5 @@
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
-    {% endfor %}
+    {% endfor %} -->
 {% endblock content %}
