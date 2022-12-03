@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+
 app = Flask(__name__)
 
 posts = [
@@ -16,6 +17,30 @@ posts = [
     }
 ]
 
+grants_data = [
+    {
+        'name': 'STEM Scholarship',
+        'organization': 'UNCF',
+        'amount': 5000,
+        'due_date': '2022-12-29',
+        'description': 'One of the public schools with a few merit scholarships is the University of Vermont...',
+    },
+    {
+        'name': 'Special Excellence Award',
+        'organization': 'CIRI',
+        'amount': 7590,
+        'due_date': '2023-03-15',
+        'description': 'One of the public schools with a few merit scholarships is the University of Vermont...',
+    },
+    {
+        'name': 'Coca Cola Scholarship Program',
+        'organization': 'Coca Cola',
+        'amount': 12000,
+        'due_date': '2022-11-05',
+        'description': 'One of the public schools with a few merit scholarships is the University of Vermont...',
+    },
+]
+
 
 @app.route("/")
 @app.route("/home")
@@ -24,7 +49,7 @@ def home():
 
 @app.route("/grants")
 def grants():
-    return render_template('grants_list.html', posts=posts)
+    return render_template('grants_list.html', grants=grants_data)
 
 
 @app.route("/about")
