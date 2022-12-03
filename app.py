@@ -22,6 +22,10 @@ posts = [
 def home():
     return render_template('home.html', posts=posts)
 
+@app.route("/grants")
+def grants():
+    return render_template('grants_list.html', posts=posts)
+
 
 @app.route("/about")
 def about():
