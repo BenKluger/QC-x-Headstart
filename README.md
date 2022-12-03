@@ -26,8 +26,8 @@
         source env/bin/activate
         ```   
   
-  - Download all the dependencies `pip install -r requirements.txt` 
+  4. Download all the dependencies `pip install -r requirements.txt` 
 
-  - Run `python app.py` and copy & paste the URL of the server into your browser
+  5. Run `python app.py` and copy & paste the URL of the server into your browser
 
-  - After making changes to your code, you can see the changes on the Web App after refreshing pressing Shift + F5
+  6. After making changes to your code, you can see the changes on the Web App after refreshing by pressing Shift + F5
