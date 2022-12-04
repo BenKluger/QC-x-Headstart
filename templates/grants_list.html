@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<div class="row">
+  <div class="col">
+    <a class="btn btn-primary" href="/upload" role="button">Upload Grant</a>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+
+      <div class="content-section">
+        <h3>Filter</h3>
+        <p class='text-muted'>Filter Grants based on your eligibility
+          <ul class="list-group">
+
+
+
+            <li class="list-group-item list-group-item-light">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Only show eligible
+                </label>
+              </div>
+            </li>
+            
+
+            <li class="list-group-item list-group-item-light">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Affiliations</option>
+                <option value="1">Queens College</option>
+                <option value="2">FARDAP</option>
+                <option value="3">QC in 4.5</option>
+              </select>
+            </li>
+
+            <li class="list-group-item list-group-item-light">
+              <div class="slider">
+                <p class = "grade">Minimum Grant Amount</p>
+                <input type="range" min="0" max="50" value="2" oninput="rangeValue.innerText = this.value">
+                <p>$<span id="rangeValue">2</span>K</p>
+            </div>
+            </li>
+            <li class="list-group-item list-group-item-light">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Free Money Only
+                </label>
+              </div>
+            </li>
+            <li class="list-group-item list-group-item-light">Calendars</li>
+            <li class="list-group-item list-group-item-light">etc</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-8">
+
+        {% for grant in grants %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+            <a class="mr-2" href="#">{{ grant.organization }}</a>
+            <small class="text-muted">due: {{ grant.due_date }}</small>
+            </div>
+            <h3><a class="article-title" href="#">{{ grant.name }} - {{ grant.amount }}</a></h3>
+            <p class="article-content">{{ grant.description }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+
+
+    </div>
+
+    
+  </div>
+
+
+
+{% endblock content %}

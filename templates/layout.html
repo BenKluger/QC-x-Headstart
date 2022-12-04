@@ -10,54 +10,100 @@
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
-    {% if title %}
-        <title>Hackathon Project - {{ title }}</title>
-    {% else %}
-        <title>Hackathon Project</title>
-    {% endif %}
+    
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-          <a class="navbar-brand mr-4" href="/">Hackathon Project</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="/">Home</a>
-              <a class="nav-item nav-link" href="/about">About</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="/login">Login</a>
-              <a class="nav-item nav-link" href="/register">Register</a>
-            </div>
+      <!-- Test navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/home">Grantastic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarText">
+          <!-- Left Side of Navbar -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/grants">Grants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+          </ul>
+
+          
+          <div class="form-outline">
+            <input type="search" id="form1" class="form-control" placeholder="Search grants" aria-label="Search" />
           </div>
+          
+          <!-- Right Side of Navbar -->
+          <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Register</a>
+            </li>
+            
         </div>
       </nav>
+      
     </header>
+
+<!-- Sidebar -->
+<!-- <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+  <div class="position-sticky">
+    <div class="list-group list-group-flush mx-3 mt-4"> -->
+      <!-- <a
+        href="#"
+        class="list-group-item list-group-item-action py-2 ripple"
+        aria-current="true"
+      >
+        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+        <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+        ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
+      > -->
+
+      <!-- <ul class="list-group">
+        <li class="list-group-item list-group-item-light">Latest Posts</li>
+        <li class="list-group-item list-group-item-light">Announcements</li>
+        <li class="list-group-item list-group-item-light">Calendars</li>
+        <li class="list-group-item list-group-item-light">etc</li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<!-- Sidebar -->
+
     <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8">
-          {% block content %}{% endblock %}
-        </div>
-        <div class="col-md-4">
-          <div class="content-section">
-            <h3>Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
+      {% block content %} {% endblock %}
     </main>
+
+
+    <footer class="py-3 my-4 fixed-bottom">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/home" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="/grants" class="nav-link px-2 text-muted">Grants</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms of Non-Service</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Careers</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Grantastic, Some Rights Reserved</p>
+    </footer>
+
+   
 
 
     <!-- Optional JavaScript -->
